@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bread Weiner</title>
+
+  <!-- Cute rounded font -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/mystyle.css">
+</head>
+<body>
+
+  <!-- HEADER / NAV -->
+  <header class="site-header">
+    <div class="wrap">
+      <a href="#Home" class="brand">
+        <img src="product-images/Logo.jpeg" alt="Bread Weiner logo" class="logo">
+        <span class="brand-name">Bread Weiner</span>
+      </a>
+
+      <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
+
+      <nav id="mainNav" class="main-nav">
+        <ul>
+          <li><a href="#Home">Home</a></li>
+          <li><a href="#Gallery">Gallery</a></li>
+          <li><a href="shop.php">Shop</a></li>
+          <li><a href="#About">About</a></li>
+          <li><a href="#Contact">Contact</a></li>
+          <li><a href="#Careers">Careers</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO / HOME -->
+  <section id="Home" class="hero">
+    <div class="wrap hero-inner">
+      <div class="hero-text">
+        <h1>Fresh, warm sourdough — made with love</h1>
+        <p class="lead">Small-batch, hand-shaped loaves baked with organic flour, filtered water and a sunny (solar-powered) oven.</p>
+        <a class="btn" href="#Shop">Shop freshly baked</a>
+      </div>
+      <div class="hero-img">
+        <img src="product-images/bread.jpg" alt="artisan breads">
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="Gallery" class="section">
+    <div class="wrap">
+      <h2>Gallery</h2>
+      <p class="section-sub">A little peek into our oven and everyday loaves.</p>
+
+      <div class="gallery-grid">
+        <img src="product-images/bread.jpg" alt="Loaf 1">
+        <img src="product-images/bsb.jpeg" alt="Loaf 2">
+        <img src="product-images/chef.jpg" alt="Chef">
+        <!-- add more images to product-images and reference them here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- SHOP (stub) -->
+  <section id="Shop" class="section soft-card">
+    <div class="wrap">
+      <h2>Shop</h2>
+      <p>Our online shop is coming soon — for now, visit us in-store or contact to arrange pickups!</p>
+      <a class="btn ghost" href="shop.php">Go to Shop (placeholder)</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="About" class="section about">
+    <div class="wrap about-grid">
+      <div class="about-left card">
+        <h2>About Luca</h2>
+        <img src="product-images/chef.jpg" alt="Photo of Luca" class="about-photo">
+        <p>
+          Hi — I’m Luca. Baking has been my dream since childhood. After a few detours in life — including a stint as a lifeguard — I followed my hands and heart to baking.
+          Luca Loaves began in Sydney CBD to bring slow, intentional bread back to the neighbourhood.
+        </p>
+
+        <h3>Why our sourdough?</h3>
+        <ul>
+          <li>No commercial yeast — only natural starter</li>
+          <li>Hand-kneaded & shaped in-house</li>
+          <li>Long fermentation (14–17 hours) for flavour & digestibility</li>
+          <li>Organic flour, filtered water, and a solar-powered oven</li>
+        </ul>
+      </div>
+
+      <div class="about-right card">
+        <h2>Mission</h2>
+        <img src="product-images/bsb.jpeg" alt="Breads out of oven" class="about-photo">
+        <p>We make real bread from the best organic ingredients — all by hand, with warmth and care, and a dash of patience.</p>
+        <a class="btn" href="#Contact">Order / Questions</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="Contact" class="section contact">
+    <div class="wrap contact-grid">
+      <div class="contact-card card">
+        <h2>Contact</h2>
+        <p>Got an order, a question, or want a tour of the bakery? Send us a message:</p>
+
+        <!-- Note: form has no backend here — it is a front-end demo -->
+        <form id="contactForm" class="contact-form" onsubmit="alert('This demo form has no backend. In a real site, you would send this to a server.'); return false;">
+          <label>
+            <span>Your name</span>
+            <input type="text" name="name" required>
+          </label>
+
+          <label>
+            <span>Your email</span>
+            <input type="email" name="email" required>
+          </label>
+
+          <label>
+            <span>Message</span>
+            <textarea name="message" rows="4" required></textarea>
+          </label>
+
+          <button class="btn" type="submit">Send message</button>
+        </form>
+      </div>
+
+      <div class="hours-card card">
+        <h3>Visit us</h3>
+        <p><strong>Location:</strong> Sydney CBD</p>
+        <p><strong>Hours:</strong><br>Mon–Fri: 7am–3pm<br>Sat: 8am–1pm<br>Sun: Closed</p>
+
+        <h4>Careers</h4>
+        <p>We look for people who love dough, early mornings, and good coffee. Email us at <a href="mailto:hello@breadweiner.example">hello@breadweiner.example</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>Made with ♥ by Bread Weiner — small-batch & sunshine-baked</p>
+      <p class="muted">Images: placeholders in <code>product-images/</code></p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

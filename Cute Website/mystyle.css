@@ -1,0 +1,80 @@
+/* mystyle.css — cute aesthetic for Bread Weiner */
+:root{
+  --bg: #fff7f0;
+  --card: #fffdf8;
+  --accent: #f6c8a1;   /* soft peach */
+  --accent-2: #ffd7e2; /* soft pink */
+  --text: #5b3a2e;     /* brown */
+  --muted: #8f6f61;
+  --shadow: 0 8px 20px rgba(91,58,46,0.08);
+  --radius: 14px;
+}
+
+/* Base */
+* { box-sizing: border-box; }
+html,body { height:100%; margin:0; font-family: 'Quicksand', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; color:var(--text); background:var(--bg); -webkit-font-smoothing:antialiased; }
+.wrap { max-width:1100px; margin:0 auto; padding:24px; }
+
+/* Header */
+.site-header { background: linear-gradient(90deg, rgba(255, 234, 227, 0.8), rgba(255, 245, 247, 0.8)); position:sticky; top:0; z-index:20; backdrop-filter: blur(4px); border-bottom:1px solid rgba(91,58,46,0.04); }
+.site-header .wrap { display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.brand { display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--text); }
+.logo { width:48px; height:48px; object-fit:cover; border-radius:12px; box-shadow:var(--shadow); }
+.brand-name { font-weight:600; font-size:18px; letter-spacing:0.3px; }
+
+/* Nav */
+.main-nav ul { list-style:none; margin:0; padding:0; display:flex; gap:14px; align-items:center; }
+.main-nav a { text-decoration:none; color:var(--text); padding:8px 12px; border-radius:10px; font-weight:600; font-size:15px; }
+.main-nav a:hover { background:var(--accent); color:#663b2d; }
+
+/* mobile nav toggle */
+.nav-toggle { display:none; border:0; background:transparent; font-size:20px; cursor:pointer; }
+
+/* HERO */
+.hero { padding:40px 0; }
+.hero-inner { display:flex; gap:32px; align-items:center; justify-content:space-between; }
+.hero-text h1 { margin:0; font-size:34px; line-height:1.05; }
+.lead { color:var(--muted); margin-top:8px; margin-bottom:16px; }
+.hero-img img { width:360px; max-width:40vw; border-radius:16px; box-shadow:var(--shadow); }
+
+/* Buttons */
+.btn { display:inline-block; padding:10px 16px; background:var(--accent-2); color:var(--text); text-decoration:none; border-radius:12px; font-weight:700; box-shadow: 0 6px 16px rgba(255,165,130,0.12); border:0; cursor:pointer; }
+.btn.ghost { background:transparent; border:2px solid var(--accent); padding:8px 14px; }
+
+/* Sections */
+.section { padding:36px 0; }
+.section h2 { margin:0 0 8px 0; font-size:22px; }
+.section-sub { color:var(--muted); margin-bottom:18px; }
+
+/* Gallery */
+.gallery-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+.gallery-grid img { width:100%; height:200px; object-fit:cover; border-radius:12px; box-shadow:var(--shadow); }
+
+/* About / layout */
+.about-grid { display:grid; grid-template-columns: 1fr 1fr; gap:20px; align-items:start; }
+.card { background:var(--card); padding:20px; border-radius:var(--radius); box-shadow:var(--shadow); }
+.about-photo { width:100%; height:200px; object-fit:cover; border-radius:10px; margin:10px 0; }
+
+/* Contact layout */
+.contact-grid { display:grid; grid-template-columns: 2fr 1fr; gap:20px; align-items:start; }
+.contact-form label { display:block; margin-bottom:12px; font-weight:600; color:var(--muted); }
+.contact-form input, .contact-form textarea { width:100%; padding:10px; border-radius:10px; border:1px solid rgba(91,58,46,0.08); margin-top:6px; font-family:inherit; }
+
+/* Footer */
+.site-footer { padding:20px 0; text-align:center; color:var(--muted); font-size:14px; }
+
+/* Responsive */
+@media (max-width:900px){
+  .hero-inner { flex-direction:column-reverse; text-align:center; }
+  .hero-img img { max-width:80vw; }
+  .gallery-grid { grid-template-columns:repeat(2,1fr); }
+  .about-grid { grid-template-columns:1fr; }
+  .contact-grid { grid-template-columns:1fr; }
+  .main-nav { display:none; }
+  .nav-toggle { display:block; }
+}
+
+@media (max-width:520px){
+  .gallery-grid { grid-template-columns:1fr; }
+  .hero-text h1 { font-size:28px; }
+}
